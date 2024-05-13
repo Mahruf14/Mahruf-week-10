@@ -1,0 +1,47 @@
+!
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week 10: JavaScript Interactions</title>
+    <script>
+        let counter = 0;  // Counter for tracking the number of clicks
+
+        function countClicks(element) {
+            counter += 1;
+            element.innerHTML = '<li>The link was pressed ' + counter + ' times.</li>';  // Update with dynamic HTML content
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Event Handling Demo</h1>
+    <p id="box">Click the link below to change this text or hover over the image to change it.</p>
+    <a href="#" onclick="countClicks(document.getElementById('box'));">Click me</a>
+    <br><br>
+    <img src="http://www.outgrabe.net/cat01.jpg"
+         onmouseover="this.src='http://www.outgrabe.net/cat02.jpg'"  // Change image on mouse over
+         onmouseout="this.src='http://www.outgrabe.net/cat01.jpg'"  // Revert image on mouse out
+         alt="Cat">
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple JavaScript Example</title>
+    <!-- JavaScript to handle a button click -->
+    <script>
+        // Function that updates the text content of a paragraph
+        function updateText() {
+            // Access the paragraph by its ID and change its content
+            document.getElementById('displayText').innerHTML = 'The button was clicked!';
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Click Event Demo</h1>
+    <!-- Paragraph where text will be updated on button click -->
+    <p id="displayText">Click the button to change this text.</p>
+    <!-- Button that triggers the JavaScript function when clicked -->
+    <a href="#" onclick="updateText();">Click me</a>
+</body>
+</html>
+s
